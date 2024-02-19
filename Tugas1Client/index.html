@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPC Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RPC Frontend</h1>
+
+        <div id="serverStatus" class="status">Server status: Connecting...</div>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'add')">Add Numbers</button>
+            <button class="tablinks" onclick="openTab(event, 'subtract')">Subtract Numbers</button>
+            <button class="tablinks" onclick="openTab(event, 'lowercase')">Lowercase String</button>
+        </div>
+
+        <div id="add" class="tabcontent">
+            <h2>Add Numbers</h2>
+            <div class="input-container">
+                <input type="text" id="addInput" placeholder="Enter numbers separated by comma">
+                <button onclick="add()">Add</button>
+            </div>
+            <p id="addResult" class="result"></p>
+        </div>
+
+        <div id="subtract" class="tabcontent">
+            <h2>Subtract Numbers</h2>
+            <div class="input-container">
+                <input type="text" id="subtractInput" placeholder="Enter numbers separated by comma">
+                <button onclick="subtract()">Subtract</button>
+            </div>
+            <p id="subtractResult" class="result"></p>
+        </div>
+
+        <div id="lowercase" class="tabcontent">
+            <h2>Lowercase String</h2>
+            <div class="input-container">
+                <input type="text" id="lowercaseInput" placeholder="Enter a string">
+                <button onclick="lowercase()">Lowercase</button>
+            </div>
+            <p id="lowercaseResult" class="result"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
